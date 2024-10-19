@@ -28,8 +28,6 @@ local ESPMenu = Instance.new("ScrollingFrame")
 local UICorner_9 = Instance.new("UICorner")
 local Machines = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
-local floor = game.Workspace.CurrentRoom:FindFirstChildOfClass("Model")
-local machines = floor:WaitForChild("Generators")
 
 --Properties:
 
@@ -51,19 +49,20 @@ Frame_2.AnchorPoint = Vector2.new(0.5, 0.5)
 Frame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame_2.BorderSizePixel = 0
-Frame_2.Position = UDim2.new(0.301258981, 0, 0.464772791, 0)
+Frame_2.Position = UDim2.new(0.300539553, 0, 0.464772791, 0)
 Frame_2.Size = UDim2.new(0, 369, 0, 641)
 
 UICorner_2.CornerRadius = UDim.new(0.100000001, 8)
 UICorner_2.Parent = Frame_2
 
 TextLabel.Parent = Frame_2
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
 TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.333368152, 0, 0.0158387665, 0)
-TextLabel.Size = UDim2.new(0.640508533, 0, 0.0621644035, 0)
+TextLabel.Position = UDim2.new(0.678879142, 0, 0.046575442, 0)
+TextLabel.Size = UDim2.new(0.642241716, 0, 0.0628554523, 0)
 TextLabel.ZIndex = 6
 TextLabel.Font = Enum.Font.FredokaOne
 TextLabel.Text = ""
@@ -87,10 +86,12 @@ UICorner_4.CornerRadius = UDim.new(0.100000001, 8)
 UICorner_4.Parent = Frame_3
 
 TextButton.Parent = Frame_3
+TextButton.AnchorPoint = Vector2.new(0.5, 0.5)
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BackgroundTransparency = 1.000
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.486842096, 0, 0.0397553518, 0)
 TextButton.Size = UDim2.new(0, 76, 0, 59)
 TextButton.Font = Enum.Font.Unknown
 TextButton.Text = "X"
@@ -123,7 +124,7 @@ Label.Parent = Frame_4
 Label.AnchorPoint = Vector2.new(0.5, 0.5)
 Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Label.BackgroundTransparency = 1.000
-Label.Position = UDim2.new(0.176751867, 0, 0.137260124, 0)
+Label.Position = UDim2.new(0.177877992, 0, 0.135527015, 0)
 Label.Size = UDim2.new(0.280616432, 0, 0.272735506, 0)
 Label.ZIndex = 5
 Label.Image = "rbxassetid://16911029760"
@@ -225,7 +226,7 @@ UICorner_10.Parent = Machines
 
 -- Scripts:
 
-local function FPHWG_fake_script() -- TextLabel.Script 
+local function KAQH_fake_script() -- TextLabel.Script 
 	local script = Instance.new('Script', TextLabel)
 
 	local strings = {
@@ -243,72 +244,51 @@ local function FPHWG_fake_script() -- TextLabel.Script
 	script.Parent.Text = strings[randomIndex]
 	
 end
-coroutine.wrap(FPHWG_fake_script)()
-local function GHITRE_fake_script() -- TextButton.Script 
-	local script = Instance.new('Script', TextButton)
+coroutine.wrap(KAQH_fake_script)()
 
+local function PUGVOM_fake_script() -- TextButton.Script 
+	local script = Instance.new('Script', TextButton)
+	-- Add functionality as needed for the button, e.g., callback logic
 	
 end
-coroutine.wrap(GHITRE_fake_script)()
-local function WLYZQLH_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(PUGVOM_fake_script)()
+
+local function DFFZDH_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.Parent.Parent:Destroy()
+		script.Parent.Parent.Parent.Parent.Parent:Destroy() -- Destroys the GUI on button click
 	end)
 end
-coroutine.wrap(WLYZQLH_fake_script)()
-local function KQXHKSD_fake_script() -- Label.LocalScript 
-	local script = Instance.new('LocalScript', Label)
+coroutine.wrap(DFFZDH_fake_script)()
 
-	-- Saved by UniversalSynSaveInstance https://discord.gg/wx4ThpAsmw
-	
-	-- Your Executor does NOT have a Decompiler
-end
-coroutine.wrap(KQXHKSD_fake_script)()
-local function PTBJDZ_fake_script() -- ESP.Script 
+local function FKEYF_fake_script() -- ESP.Script 
 	local script = Instance.new('Script', ESP)
 
 	script.Parent.MouseButton1Click:Connect(function()
-	
-		-- Make shit appear!±!!
-	
-		local ToonSelecter = script.Parent.Parent.Parent.ESP
-	
-		if ToonSelecter.Visible == false then
-			ToonSelecter.Visible = true
-		elseif ToonSelecter.Visible == true then
-			ToonSelecter.Visible = false
-		end
+		-- Toggles the visibility of ESP Menu
+		local ESPMenu = script.Parent.Parent.Parent.ESPMenu
+		ESPMenu.Visible = not ESPMenu.Visible
 	end)
-	
-	
 end
-coroutine.wrap(PTBJDZ_fake_script)()
-local function VMGXFVJ_fake_script() -- Label_2.LocalScript 
-	local script = Instance.new('LocalScript', Label_2)
+coroutine.wrap(FKEYF_fake_script)()
 
-	-- Saved by UniversalSynSaveInstance https://discord.gg/wx4ThpAsmw
-	
-	-- Your Executor does NOT have a Decompiler
-end
-coroutine.wrap(VMGXFVJ_fake_script)()
-local function MNWN_fake_script() -- Machines.Script 
+local function QXNQE_fake_script() -- Machines.Script 
 	local script = Instance.new('Script', Machines)
 
+	-- Detects the Generators within the current room in Workspace
+	local floor = game.Workspace.CurrentRoom:FindFirstChildOfClass("Model")
+	local machines = floor:WaitForChild("Generators")
+	
 	script.Parent.MouseButton1Click:Connect(function()
-	
-			for i,v in pairs(machines:GetChildren()) do
-				local HighLight = Instance.new("Highlight")
-				HighLight.FillTransparency = 1
-				HighLight.OutlineColor = Color3.fromRGB(0,0,255)
-				HighLight.Parent = v.IchorFull
-				HighLight.DepthMode = Enum.DepthMode.AlwaysOnTop
-	
-			end
-			
+		for _, generator in pairs(machines:GetChildren()) do
+			-- Creates a highlight effect for the machines
+			local highlight = Instance.new("Highlight")
+			highlight.FillTransparency = 1
+			highlight.OutlineColor = Color3.fromRGB(0, 0, 255)
+			highlight.Parent = generator.IchorFull
+			highlight.DepthMode = Enum.DepthMode.AlwaysOnTop
+		end
 	end)
-	
-	
 end
-coroutine.wrap(MNWN_fake_script)()
+coroutine.wrap(QXNQE_fake_script)()
