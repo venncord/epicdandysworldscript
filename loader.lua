@@ -24,10 +24,12 @@ local UICorner_7 = Instance.new("UICorner")
 local ESP = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
 local Label_2 = Instance.new("ImageLabel")
-local ESP_2 = Instance.new("ScrollingFrame")
+local ESPMenu = Instance.new("ScrollingFrame")
 local UICorner_9 = Instance.new("UICorner")
 local Machines = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
+local floor = game.Workspace.CurrentRoom:FindFirstChildOfClass("Model")
+local machines = floor:WaitForChild("Generators")
 
 --Properties:
 
@@ -190,21 +192,21 @@ Label_2.ZIndex = 5
 Label_2.Image = "rbxassetid://16911029760"
 Label_2.ScaleType = Enum.ScaleType.Fit
 
-ESP_2.Name = "ESP"
-ESP_2.Parent = Frame_4
-ESP_2.Active = true
-ESP_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ESP_2.BackgroundTransparency = 1.000
-ESP_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ESP_2.BorderSizePixel = 0
-ESP_2.Position = UDim2.new(0.343468457, 0, 0.272097051, 0)
-ESP_2.Size = UDim2.new(0, 542, 0, 385)
-ESP_2.ScrollBarThickness = 3
+ESPMenu.Name = "ESPMenu"
+ESPMenu.Parent = Frame_4
+ESPMenu.Active = true
+ESPMenu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ESPMenu.BackgroundTransparency = 1.000
+ESPMenu.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ESPMenu.BorderSizePixel = 0
+ESPMenu.Position = UDim2.new(0.343468457, 0, 0.272097051, 0)
+ESPMenu.Size = UDim2.new(0, 542, 0, 385)
+ESPMenu.ScrollBarThickness = 3
 
-UICorner_9.Parent = ESP_2
+UICorner_9.Parent = ESPMenu
 
 Machines.Name = "Machines"
-Machines.Parent = ESP_2
+Machines.Parent = ESPMenu
 Machines.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Machines.BackgroundTransparency = 0.600
 Machines.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -223,7 +225,7 @@ UICorner_10.Parent = Machines
 
 -- Scripts:
 
-local function ZACXLDY_fake_script() -- TextLabel.Script 
+local function FPHWG_fake_script() -- TextLabel.Script 
 	local script = Instance.new('Script', TextLabel)
 
 	local strings = {
@@ -241,30 +243,30 @@ local function ZACXLDY_fake_script() -- TextLabel.Script
 	script.Parent.Text = strings[randomIndex]
 	
 end
-coroutine.wrap(ZACXLDY_fake_script)()
-local function ZJVEWNU_fake_script() -- TextButton.Script 
+coroutine.wrap(FPHWG_fake_script)()
+local function GHITRE_fake_script() -- TextButton.Script 
 	local script = Instance.new('Script', TextButton)
 
 	
 end
-coroutine.wrap(ZJVEWNU_fake_script)()
-local function IPFASY_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(GHITRE_fake_script)()
+local function WLYZQLH_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(IPFASY_fake_script)()
-local function CLVJUA_fake_script() -- Label.LocalScript 
+coroutine.wrap(WLYZQLH_fake_script)()
+local function KQXHKSD_fake_script() -- Label.LocalScript 
 	local script = Instance.new('LocalScript', Label)
 
 	-- Saved by UniversalSynSaveInstance https://discord.gg/wx4ThpAsmw
 	
 	-- Your Executor does NOT have a Decompiler
 end
-coroutine.wrap(CLVJUA_fake_script)()
-local function EQFM_fake_script() -- ESP.Script 
+coroutine.wrap(KQXHKSD_fake_script)()
+local function PTBJDZ_fake_script() -- ESP.Script 
 	local script = Instance.new('Script', ESP)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -282,16 +284,16 @@ local function EQFM_fake_script() -- ESP.Script
 	
 	
 end
-coroutine.wrap(EQFM_fake_script)()
-local function LBIW_fake_script() -- Label_2.LocalScript 
+coroutine.wrap(PTBJDZ_fake_script)()
+local function VMGXFVJ_fake_script() -- Label_2.LocalScript 
 	local script = Instance.new('LocalScript', Label_2)
 
 	-- Saved by UniversalSynSaveInstance https://discord.gg/wx4ThpAsmw
 	
 	-- Your Executor does NOT have a Decompiler
 end
-coroutine.wrap(LBIW_fake_script)()
-local function GQNE_fake_script() -- Machines.Script 
+coroutine.wrap(VMGXFVJ_fake_script)()
+local function MNWN_fake_script() -- Machines.Script 
 	local script = Instance.new('Script', Machines)
 
 	local floor = game.Workspace.CurrentRoom:FindFirstChildOfClass("Model")
@@ -313,4 +315,4 @@ local function GQNE_fake_script() -- Machines.Script
 	
 	
 end
-coroutine.wrap(GQNE_fake_script)()
+coroutine.wrap(MNWN_fake_script)()
