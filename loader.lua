@@ -296,10 +296,6 @@ coroutine.wrap(VMGXFVJ_fake_script)()
 local function MNWN_fake_script() -- Machines.Script 
 	local script = Instance.new('Script', Machines)
 
-	local floor = game.Workspace.CurrentRoom:FindFirstChildOfClass("Model")
-	local machines = floor:WaitForChild("Generators")
-	
-	
 	script.Parent.MouseButton1Click:Connect(function()
 	
 			for i,v in pairs(machines:GetChildren()) do
